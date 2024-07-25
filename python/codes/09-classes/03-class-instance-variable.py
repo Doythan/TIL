@@ -9,13 +9,14 @@ class Person:
 
 person1 = Person('iu')
 person2 = Person('BTS')
+person2 = Person('BigBang')
 
 print(Person.count)  # 2
 
 ##########################
 
 class Circle:
-    pi = 3.14a
+    pi = 3.14
 
     def __init__(self, r):
         self.r = r

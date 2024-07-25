@@ -13,5 +13,5 @@ class Person:
 
 person1 = Person('iu')
 person2 = Person('BTS')
-
+person3 = Person('BigBang')
 Person.number_of_population() 
