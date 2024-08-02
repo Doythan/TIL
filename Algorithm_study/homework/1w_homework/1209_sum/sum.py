@@ -1,5 +1,5 @@
 import sys
-sys.stdin = open("input.txt", "r")
+sys.stdin = open("../sum/input.txt", "r")
 
 for tc in range(1, 11):
     T = int(input())
