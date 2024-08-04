@@ -1,14 +1,48 @@
-T = int(input)
+import sys
+sys.stdin = open("input.txt", "r")
+
+T = int(input())
+di = [0, 1, 0, -1]
+dj = [1, 0, -1, 0]
+
 for tc in range(1, T+1):
-    n, m = map(int, (input().split()))
-    arr = [list(map(int, input().split())) for _ in range(3)]
-    a = 0
-    temp = 0
+    n, m = map(int, input().split())
+    a = [list(map(int, input().split())) for _ in range(n)]
+    temp, ans = 0, 0
     for i in range(n):
         for j in range(m):
-            a = arr[i][j]
-            for k in range(a):
-                if i-k != 0:
-                    temp = temp + a[i-k][j] + a[i][j-k]
+            temp = a[i][j]
+            temp_2 = temp
+            for k in range(4):
+                for l in range(1, temp + 1):
+                    ni = i + di[k] * l
+                    nj = j + dj[k] * l
+                    if 0 <= ni < n and 0 <= nj < m:
+                        temp_2 += a[ni][nj]
+            if temp_2 > ans:
+                ans = temp_2
+    print(f'#{tc}', ans)
 
 
+# T = int(input())
+# di = [0, 1, 0, -1]
+# dj = [1, 0, -1, 0]
+#
+# for tc in range(1, T + 1):
+#     n, m = map(int, input().split())
+#     a = [list(map(int, input().split())) for _ in range(n)]
+#     ans = 0
+#
+#     for i in range(n):
+#         for j in range(m):
+#             temp_2 = a[i][j]
+#             for k in range(4):
+#                 for l in range(1, a[i][j] + 1):
+#                     ni = i + di[k] * l
+#                     nj = j + dj[k] * l
+#                     if 0 <= ni < n and 0 <= nj < m:
+#                         temp_2 += a[ni][nj]
+#             if temp_2 > ans:
+#                 ans = temp_2
+#
+#     print(f'#{tc} {ans}')
