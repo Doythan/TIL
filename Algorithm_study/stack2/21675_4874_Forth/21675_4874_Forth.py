@@ -7,6 +7,11 @@ def calculator(calculation_formula):
     for char in calculation_formula:
         if char.isdecimal():
             value_stack.append(int(char))
+        elif char == '.':
+            if len(value_stack) == 1:
+                return int(value_stack.pop())
+            else:
+                return 'error'
         else:
             if char == '.':
                 break
@@ -22,19 +27,18 @@ def calculator(calculation_formula):
                 value_stack.append(int(left // right))
             elif char == '-':
                 value_stack.append(left - right)
-            elif char == '.':
-                if len(char) != 1:
-                    return "error"
-                    break
+            # elif char == '.':
+            #     if len(char) != 1:
+            #         return "error"
+            #         break
     return value_stack.pop()
 
 
 T = int(input())
-for tc in range(1, T+1):
+for tc in range(1, T + 1):
     calculation_formula = input().split()
     result = calculator(calculation_formula)
     print(f'#{tc}', result)
-
 
 
 
