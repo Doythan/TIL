@@ -8,8 +8,7 @@ def infix_to_postfix(expression):
         if char.isnumeric():  # 피연산자인 경우
             output.append(char)  # 출력 리스트에 추가
         elif char in precedence:  # 연산자인 경우
-            while (operators and operators[-1] != '(' and
-                   precedence[operators[-1]] >= precedence[char]):
+            while operators and operators[-1] != '(' and precedence[operators[-1]] >= precedence[char]:
                 output.append(operators.pop())  # 스택에서 연산자를 꺼내 출력 리스트에 추가
             operators.append(char)  # 현재 연산자를 스택에 추가
         elif char == '(':  # 여는 괄호인 경우
@@ -48,7 +47,7 @@ def evaluate_postfix(expression):
     return stack[0]  # 최종 결과를 반환
 
 # 예제 사용
-expression = "3+5*(2-8)"
+expression = "(6+5*(2-8)/2)"
 postfix_expression = infix_to_postfix(expression)
 print("후위 표기법:", postfix_expression)  # "3528-*+"
 result = evaluate_postfix(postfix_expression)

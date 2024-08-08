@@ -1,3 +1,5 @@
+
+# 백트래킹 미로문제 예시 )
 def is_safe(maze, x, y, solution):
     """
     미로에서 (x, y) 위치가 안전한지 확인
