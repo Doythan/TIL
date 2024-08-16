@@ -30,7 +30,7 @@ for tc in range(1, T+1):  # 각 테스트 케이스에 대한 반복
     temp = []  # 각 위치에 대한 카운트를 저장할 리스트
     ans = []  # 결과를 저장할 리스트
     for _ in range(n):
-        a, b = map(int, input().split()) # a이상 b이하인 정류장 이동 가능
+        a, b = map(int, input().split())  # a이상 b이하인 정류장 이동 가능
         if len(temp) < b:  # 처음 이후로 a, b를 입력받을때 a ~ b 구간이 초기화가 안되있는 경우 대비
             # for i in range(len(temp), b+1):
             for i in range(len(temp), 5001):
