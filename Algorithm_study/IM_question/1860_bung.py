@@ -31,16 +31,5 @@ for tc in range(1, T+1):
 
     print(f'#{tc}', ans)
 
-
-
-
-    #         cnt += 1
-    #         if cnt > bung:
-    #             ans = 'Impossible'
-    #             break
-    #     else:
-    #         time += M
-    #         bung += K
-    #         cnt = 0
-    #
-    # print(f'#{tc}', ans)
+    print(ans)
+    
