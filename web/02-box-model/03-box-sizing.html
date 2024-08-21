@@ -8,13 +8,18 @@
   <style>
     .box {
       width: 100px;
+      height: 100px;
       border: 2px solid black;
       padding: 10px;
       margin: 20px;
       background-color: yellow;
     }
 
-    .content-box {}
+    .content-box {
+      box-sizing: content-box;
+      width: 50%;
+      height: 15%;
+    }
 
     .border-box {
       box-sizing: border-box;
