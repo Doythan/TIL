@@ -45,13 +45,3 @@ for tc in range(1, T+1):
 #             corridor[i] += 1
 #
 #     print(f'#{t} {max(corridor)}')
-
-
-
-
-
-2 3 4 5
-6 7 8 9
-
-
-0 1 1 1 1 1 1 1 1
