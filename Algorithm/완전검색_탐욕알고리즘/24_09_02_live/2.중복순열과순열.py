@@ -8,7 +8,7 @@ def type1(x):
         print(path)
         return
 
-    for i in range(1, 7):
+    for i in range(1, 4):
         path.append(i)
         type1(x + 1)
         path.pop()
@@ -19,7 +19,7 @@ def type2(x):
         print(path)
         return
 
-    for i in range(1, 7):
+    for i in range(1, 4):
         if used[i]:
             continue
 
