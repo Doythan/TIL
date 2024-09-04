@@ -1,10 +1,10 @@
 def binary_search(arr, target):
     left, right = 0, len(arr) - 1
     last_direction = 0  # 0: 초기 상태, -1: 왼쪽, 1: 오른쪽
-    
+
     while left <= right:
         mid = (left + right) // 2
-        
+
         if arr[mid] == target:
             return True
 
@@ -22,16 +22,22 @@ def binary_search(arr, target):
 
     return False
 
+
 T = int(input())
 for tc in range(1, T + 1):
     N, M = map(int, input().split())  # 배열 A의 크기, 배열 B의 크기 입력
     arr_a = list(map(int, input().split()))  # 배열 A 입력
     arr_a.sort()  # 배열 A 오름차순으로 정렬
     arr_b = list(map(int, input().split()))  # 배열 B 입력
-    
+
     cnt = 0
-    for num in arr_b:
-        if binary_search(arr_a, num):
+    for i in range(len(arr_b)):
+        if binary_search(arr_a, arr_b[i]):
             cnt += 1
 
     print(f'#{tc} {cnt}')
+
+
+
+
+
