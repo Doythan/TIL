@@ -1,3 +1,7 @@
+import sys
+sys.stdin = open("input.txt", "r")
+
+
 def F(idx, current_probablity):
     global max_probablity
 

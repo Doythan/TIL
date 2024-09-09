@@ -1,46 +1,31 @@
-def dfs(idx, left, right):
-    global count
-
-    # 왼쪽 저울이 오른쪽 저울보다 가벼워지면 그만 둔다 (백트래킹)
-    if left < right:
-        return
-
-    # 모든 추를 다 배치했다면 카운트 증가
-    if idx == N:
-        count += 1
-        return
-
-    # 다음 추를 왼쪽에 올리기
-    dfs(idx + 1, left + weights[idx], right)
-
-    # 다음 추를 오른쪽에 올리기
-    dfs(idx + 1, left, right + weights[idx])
+from collections import deque
 
 
-def solve(weights):
-    global count
-    count = 0
-    # 추들의 모든 순열을 순차적으로 확인
-    perm(weights, 0)
-    return count
+def bfs(si, sj):
+    q = deque([])
+    v = [[0] * 16 for _ in range(16)]
+    di, dj = [-1, 1, 0, 0], [0, 0, -1, 1]
+
+    q.append([si, sj])
+    v[si][sj] = 1
+
+    while q:
+        ci, cj = q.popleft()
+        if arr[ci][cj] == 3:  # 도착점 도달 시
+            return 1
+
+        for k in range(4):
+            ni = ci + di[k]
+            nj = cj + dj[k]
+
+            # 범위 내에 있고, 방문하지 않았으며, 벽이 아니면 이동
+            if 0 <= ni < 16 and 0 <= nj < 16 and (arr[ni][nj] == 0 or arr[ni][nj] == 3) and v[ni][nj] == 0:
+                q.append([ni, nj])
+                v[ni][nj] = 1
+
+    return 0  # 도착점에 도달하지 못했을 때
 
 
-# 순열 생성 함수
-def perm(arr, k):
-    if k == len(arr):
-        dfs(0, 0, 0)
-    else:
-        for i in range(k, len(arr)):
-            arr[k], arr[i] = arr[i], arr[k]
-            perm(arr, k + 1)
-            arr[k], arr[i] = arr[i], arr[k]
-
-
-# 테스트케이스 처리
-T = int(input())
-for tc in range(1, T + 1):
-    N = int(input())
-    weights = list(map(int, input().split()))
-    count = 0
-    result = solve(weights)
-    print(f'#{tc} {result}')
+for tc in range(1, int(input()) + 1):  # 테스트 케이스 반복
+    arr = [list(map(int, input().strip())) for _ in range(16)]
+    print(f'#{tc} {bfs(1, 1)}')

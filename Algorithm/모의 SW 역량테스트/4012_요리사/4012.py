@@ -6,7 +6,7 @@ sys.stdin = open("input.txt", "r")
 def dfs(n, a_list, b_list):
     global ans
     if n == N:
-        if len(a_list) == M:  # a음식에 선택된 재료 개수가 절반일 경우
+        if len(a_list) == M:  # a 음식에 선택된 재료 개수가 절반일 경우
             a_sum, b_sum = 0, 0  # 음식맛의 합 구하기
             for i in range(M):
                 for j in range(M):

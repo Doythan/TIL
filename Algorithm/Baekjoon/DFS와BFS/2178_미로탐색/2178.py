@@ -1,6 +1,6 @@
 from collections import deque
-# import sys
-# sys.stdin = open("input.txt", "r")
+import sys
+sys.stdin = open("input.txt", "r")
 # sys.setrecursionlimit(10000)
 
 
@@ -30,4 +30,5 @@ N, M = map(int, input().split())
 arr = [list(map(int, input())) for _ in range(N)]
 
 ans = bfs(0, 0, N-1, M-1)
+
 print(ans)
