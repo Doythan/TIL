@@ -1,31 +1,47 @@
-from collections import deque
+def dfs(index, current_result, plus, minus, multiply, divide):
+    global max_result, min_result
+
+    # 모든 숫자를 다 사용한 경우
+    if index == N:
+        max_result = max(max_result, current_result)
+        min_result = min(min_result, current_result)
+        return
+
+    # 덧셈 연산자 사용 가능하면
+    if plus > 0:
+        dfs(index + 1, current_result + numbers[index], plus - 1, minus, multiply, divide)
+
+    # 뺄셈 연산자 사용 가능하면
+    if minus > 0:
+        dfs(index + 1, current_result - numbers[index], plus, minus - 1, multiply, divide)
+
+    # 곱셈 연산자 사용 가능하면
+    if multiply > 0:
+        dfs(index + 1, current_result * numbers[index], plus, minus, multiply - 1, divide)
+
+    # 나눗셈 연산자 사용 가능하면
+    if divide > 0:
+        # 나눗셈은 음수일 때 주의해야 함
+        if current_result < 0:
+            dfs(index + 1, -(-current_result // numbers[index]), plus, minus, multiply, divide - 1)
+        else:
+            dfs(index + 1, current_result // numbers[index], plus, minus, multiply, divide - 1)
 
 
-def bfs(si, sj):
-    q = deque([])
-    v = [[0] * 16 for _ in range(16)]
-    di, dj = [-1, 1, 0, 0], [0, 0, -1, 1]
+# 입력 받기
+T = int(input())  # 테스트 케이스 수
 
-    q.append([si, sj])
-    v[si][sj] = 1
+for test_case in range(1, T + 1):
+    N = int(input())  # 숫자의 개수
+    operators = list(map(int, input().split()))  # 연산자의 개수 [+, -, *, /]
+    numbers = list(map(int, input().split()))  # 사용할 숫자들
 
-    while q:
-        ci, cj = q.popleft()
-        if arr[ci][cj] == 3:  # 도착점 도달 시
-            return 1
+    # 최대값, 최소값 초기화
+    max_result = -float('inf')
+    min_result = float('inf')
 
-        for k in range(4):
-            ni = ci + di[k]
-            nj = cj + dj[k]
+    # 첫 번째 숫자를 가지고 dfs 시작
+    dfs(1, numbers[0], operators[0], operators[1], operators[2], operators[3])
 
-            # 범위 내에 있고, 방문하지 않았으며, 벽이 아니면 이동
-            if 0 <= ni < 16 and 0 <= nj < 16 and (arr[ni][nj] == 0 or arr[ni][nj] == 3) and v[ni][nj] == 0:
-                q.append([ni, nj])
-                v[ni][nj] = 1
-
-    return 0  # 도착점에 도달하지 못했을 때
-
-
-for tc in range(1, int(input()) + 1):  # 테스트 케이스 반복
-    arr = [list(map(int, input().strip())) for _ in range(16)]
-    print(f'#{tc} {bfs(1, 1)}')
+    # 결과 출력
+    print(f"#{test_case} {max_result - min_result}")
