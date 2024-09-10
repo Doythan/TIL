@@ -1,28 +1,24 @@
 # 복합 연산자
 y = 10
 y -= 4
-y = y - 4
+# y = y - 4
 print(y)  # 6
 
 z = 7
 z *= 2
-z = z * 2
 print(z)  # 14
 
 w = 15
 w /= 4
-w = w / 4
 print(w)  # 3.75
 
 q = 20
 q //= 3
-q = q // 3
 print(q)  # 6
 
 
 # 비교 연산자
 print(3 > 6)  # False
-print(3 >= 3) # True
 print(2.0 == 2)  # True
 print(2 != 2)  # False
 print('HI' == 'hi')  # False
@@ -35,6 +31,8 @@ print(1 is True)  # False
 print(2 is 2.0)  # False
 print(1 == True)  # True
 print(2 == 2.0)  # True
+
+
 
 
 # 논리 연산자

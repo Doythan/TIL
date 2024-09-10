@@ -27,11 +27,10 @@ class Person:
 
 class Student(Person):
     def __init__(self, name, age, number, email, student_id, gpa):
-        super().__init__(name, age, number, email) # self 빼고 인자를 넣어주기 
+        super().__init__(name, age, number, email)
         self.student_id = student_id
         self.gpa = gpa
-
-
+        
 
 
 # super 사용 예시 - 다중 상속
@@ -54,9 +53,10 @@ class ParentB:
 class Child(ParentA, ParentB):
     def __init__(self):
         super().__init__()
-        self.value_c = 'Child'
+        self.value_c = 'CHild'
+
 
 child1 = Child()
 print(child1.value_a)
 print(child1.value_c)
-# print(child1.value_b) # AttributeError: 'Child' object has no attribute 'value_b'
+print(child1.value_b)  # AttributeError: 'Child' object has no attribute 'value_b'

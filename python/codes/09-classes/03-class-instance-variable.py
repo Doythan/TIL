@@ -9,7 +9,6 @@ class Person:
 
 person1 = Person('iu')
 person2 = Person('BTS')
-person2 = Person('BigBang')
 
 print(Person.count)  # 2
 
@@ -23,18 +22,16 @@ class Circle:
 
 c1 = Circle(5)
 c2 = Circle(10)
+
 print(c1.r)
 print(c2.r)
 
 # c1의 인스턴스 변수 pi를 생성
-c1.pi = 100 
+c1.pi = 100
 
-print(Circle.pi) # 3.14 -> 올바른 사용법 
-print(c1.pi) # 100
-print(c2.pi) # 3.14
-
-
-
+print(Circle.pi)  # 3.14
+print(c1.pi)  # 100
+print(c2.pi)  # 3.14
 
 
 

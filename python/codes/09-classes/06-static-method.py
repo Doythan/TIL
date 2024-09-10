@@ -1,7 +1,7 @@
 class StringUtils:
     def __init__(self):
         pass
-    
+
     @staticmethod
     def reverse_string(string):
         return string[::-1]
@@ -9,10 +9,15 @@ class StringUtils:
     @staticmethod
     def capitalize_string(string):
         return string.capitalize()
-
-
+    
 text = 'hello, world'
-reversed_text = StringUtils.reverse_string(text)
-print(reversed_text)
-capitalize_text = StringUtils.capitalize_string(text)
-print(capitalize_text)
+
+# result1 = StringUtils.reverse_string(text)
+# print(result1)
+    
+instance1 = StringUtils()
+print(instance1.reverse_string(text))
+
+
+
+

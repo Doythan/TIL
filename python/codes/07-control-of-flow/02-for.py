@@ -1,8 +1,10 @@
 items = ['apple', 'banana', 'coconut']
+
 for item in items:
     print(item)
 
 country = 'Korea'
+
 for char in country:
     print(char)
 
@@ -20,20 +22,34 @@ for key in my_dict:
     print(my_dict[key])
 
 
-numbers = [4, 6, 10, -8, 5] #안에 값들 보다 얘네들의 인덱스가 더 중요한 경우가 있다.
+numbers = [4, 6, 10, -8, 5]
+
 for i in range(len(numbers)):
     numbers[i] = numbers[i] * 2
+
 print(numbers)
+
 
 
 outers = ['A', 'B']
 inners = ['c', 'd']
+
 for outer in outers:
     for inner in inners:
         print(outer, inner)
+"""
+A c
+A d
+B c
+B d
+"""
 
 
-elements = [['A', 'B'], ['c', 'd']]
+elements = [
+    ['A', 'B'], 
+    ['c', 'd']
+]
+
 for elem in elements:
     for item in elem:
         print(item)

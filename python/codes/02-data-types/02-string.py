@@ -28,6 +28,7 @@ print(my_str[3:])  # lo
 print(my_str[0:5:2])  # hlo
 print(my_str[::-1])  # olleh
 
+
 # 길이
 print(len(my_str))  # 5
 

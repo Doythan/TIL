@@ -17,10 +17,10 @@ print(my_tuple[::-1])  # (5, 'b', 3, 'a', 1)
 # 길이
 print(len(my_tuple))  # 5
 
-# # TypeError: 'tuple' object does not support item assignment
+# TypeError: 'tuple' object does not support item assignment
 # my_tuple[1] = 'z'
 
-x, y = 10, 11
+x, y = 10, 20
 print(x)
 print(y)
 

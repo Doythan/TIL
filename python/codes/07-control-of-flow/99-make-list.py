@@ -17,7 +17,6 @@ print(result2)
 print(result3)
 
 
-
 """
 성능 비교
 

@@ -17,7 +17,7 @@ print(my_list[::-1])  # [5, 'b', 3, 'a', 1]
 print(len(my_list))  # 5
 
 # 중첩된 리스트
-my_list = [1, 2 ,3, ['python', 'hello', 100]]
+my_list = [1, 2, 3, ['python', 'hello', 100]]
 print(len(my_list))
 print(my_list[3][1])
 print(my_list[3][1][-1])
@@ -25,6 +25,4 @@ print(my_list[3][1][-1])
 # 리스트는 가변
 my_list = [1, 2, 3]
 my_list[0] = 100
-print(my_list)
-
-
+print(my_list)  # [100, 2, 3] 

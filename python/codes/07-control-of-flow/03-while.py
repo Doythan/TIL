@@ -4,8 +4,7 @@ while a < 3:
     print(a)
     a += 1
 
-print('ends')
-
+print('끝')
 
 
 number = int(input('양의 정수를 입력해주세요.: '))
