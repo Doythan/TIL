@@ -1,0 +1,31 @@
+git init : 이 폴더를 git으로 관리하겠다.
+
+working directory : 현재 작업중인 폴더 내의 .git 을 제외한 폴더 위치
+
+git add : staging area에 해당하는 파일을 등록 
+
+staging area : 등록한 파일들의 변동사항만 기록한 txt 파일을 '.git' 폴더 어딘가에 모아둠
+
+git commit -m 'commit messageg' : staging area에 등록해둔 변동사항을 하나의 버전으로 기록한다 그 후, staging area는 버림
+commit : 즉, 버전이란, 아까 전 staging area에 등록해둔, 변동사항만을 모아서 하나의 상태로 저장하고 그 곳을 repository 라고 부름 
+
+ex) git push origin master 에서 origin : 위치, master : branch 
+
+<Git Branch>
+git branch, git switch 
+
+git branch : 브랜치 목록 확인
+git branch -r : 원격 저장소의 브랜치 목록 확인
+git branch <브랜치 이름> : 새로운 브랜치 생성
+git branch -d <브랜치 이름> : 브랜치 삭제(병합된 브랜치만 삭제 가능)
+git branch -D <브랜치 이름> : 브랜치 삭제(강제 삭제) 
+
+git switch <다른 브랜치 이름> : 브랜치 목록 확인 
+git switch -c <브랜치 이름> : 원격 저장소의 브랜치 목록 확인 
+git switch -c <브랜치 이름> <commit ID> : 새로운 브랜치 생성 
+
+다른 브랜치에서 각각 작업을 한 후 합칠때
+합칠 곳으로 스위치하고 git merge <브랜치이름> 
+3merge 상태에서는 :q 를 입력 하면됨 
+
+다른 브랜치에서 같은 파일을 작업하다가 충돌하면 git이 물어본다 걱정할 필요 ㄴㄴ 
