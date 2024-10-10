@@ -1,3 +1,4 @@
+-- Active: 1728576498836@@127.0.0.1@3306
 -- 공통
 SELECT * FROM articles;
 SELECT * FROM users;
@@ -39,5 +40,8 @@ VALUES
 
 
 -- INNER JOIN
+SELECT * FROM articles
+INNER JOIN users
+  ON user.id = articles.userId;
 
 -- LEFT JOIN
