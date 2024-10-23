@@ -81,3 +81,7 @@
 ---
 
 ## 어려웠던 내용 + 이해 안 되는 내용
+---
+
+## Tip
+MDN 문서에서 검색하여 학습 예를들어 함수에서 더 학습하고자 할 때는 javascript fucntion mdn, javascript DOM 등등 
