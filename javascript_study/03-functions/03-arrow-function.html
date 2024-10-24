@@ -13,7 +13,7 @@
     const arrow1 = function (name) {
       return `hello, ${name}`
     }
-    // 1. function 키워드 삭제 후 화살표 작성, 굳이 한줄로 안써도 됨 
+    // 1. function 키워드 삭제 후 화살표 작성
     const arrow2 = (name) => {
       return `hello, ${name}`
     }
@@ -25,13 +25,6 @@
 
     // 3. 중괄호와 return 삭제 (함수 본문이 return을 포함한 표현식 1개일 경우에만 가능)
     const arrow4 = name => `hello, ${name}`
-
-    // cf) 2, 3단계를 알고는 있어야 하나, 우리는 1번 위주로 할 것이다. 
-    
-    console.log(arrow1('경원'))
-    console.log(arrow2('경원'))
-    console.log(arrow3('경원'))
-    console.log(arrow4('경원'))
   </script>
 </body>
 

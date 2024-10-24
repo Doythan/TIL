@@ -11,3 +11,7 @@
 | 10/29  | Asynchronous JavaScript |
 | 10/30  | Ajax with Django        |
 
+
+------------------------------------
+### Tip
+1. MDN 문서에서 검색하여 학습 예를들어 함수에서 더 학습하고자 할 때는 javascript fucntion mdn, javascript DOM 등등 

@@ -30,28 +30,30 @@
     // h1 요소를 선택
     const h1Tag = document.querySelector('.heading')
     // h1 요소의 클래스 목록 확인
-    console.log(h1Tag.classList) 
+    console.log(h1Tag.classList)
 
     // h1 요소의 클래스 목록에 red 클래스 추가
     h1Tag.classList.add('red')
     console.log(h1Tag)
-    
-    h1Tag.classList.remove('red')
-    console.log(h1Tag)  
+    console.log(h1Tag.classList)
+
+    // h1Tag.classList.remove('red')
+    // console.log(h1Tag.classList)
 
     h1Tag.classList.toggle('red')
-    console.log(h1Tag)  
+    console.log(h1Tag.classList)
+    
     // 2. 일반 속성 조작
     // a 요소 선택
     const aTag = document.querySelector('a')
     console.log(aTag.getAttribute('href'))
 
-    // a 요소의 href 속성 값을 네이버로 변경 
-    aTag.setAttribute('href', 'http://www.naver.com/')
-    console.log(aTag.getAttribute('href')) 
+    // a 요소의 href 속성 값을 naver로 변경
+    aTag.setAttribute('href', 'https://www.naver.com/')
+    console.log(aTag.getAttribute('href'))
 
-    // a 요소의 href 속성 값 삭제 
-    aTag.removeAttribute('href') 
+    // a 요소의 href 속성 값 삭제
+    aTag.removeAttribute('href')
     console.log(aTag.getAttribute('href'))
   </script>
 </body>
