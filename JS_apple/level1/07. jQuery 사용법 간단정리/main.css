@@ -1,0 +1,15 @@
+.alert-box {
+  background-color: skyblue;
+  padding: 20px;
+  color: white;
+  border-radius: 5px;
+  display: none;  /* 버튼 누르면 보여주기 위해서 평소에는 숨기기 */
+}
+
+.list-group {
+  display: none;
+}
+
+.show {
+  display: block;
+}

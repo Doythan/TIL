@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+  <div class="alert-box" id="alert">
+    <p id="title">알림창</p>
+    <button id="close">닫기</button>
+  </div>
+  <button onclick="열기 ('아이디 입력:')">아이디 알림창</button>
+  <button onclick="열기 ('비밀번호 입력:')">비밀번호 알림창</button>
+
+  <script>
+    document.getElementById('close').addEventListener('mouseover', function () {
+      document.getElementById('alert').style.display = 'none' 
+    })
+
+    function 열기 (IdPassword) {
+      document.getElementById('alert').style.display='block'
+      document.getElementById('title').innerHTML = IdPassword
+    }
+
+    function 닫기 () {
+      document.getElementById('alert').style.display='none'
+    }
+  </script>
+</body>
+</html>
