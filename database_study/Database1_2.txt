@@ -1,8 +1,0 @@
-DDL(Data Definition Language), 데이터의 기본 구조 및 형식 변경 역할, 키원드 : CREATE, DROP, ALTER
-
-Create a table
-CREATE TABLE 
-CREATE TABLE statement : 테이블 생성
-CREATE TABLE syntax 
-- 각 필드에 적용할 데이터 타입 작성, 테이블 및 필드에 대한 제약조건(constraints) 작성 
-
