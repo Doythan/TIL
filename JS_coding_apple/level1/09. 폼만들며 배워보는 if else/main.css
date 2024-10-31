@@ -1,0 +1,12 @@
+.list-group {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.main-bg {
+  padding: 100px 20px;
+  background: lightgray;
+}

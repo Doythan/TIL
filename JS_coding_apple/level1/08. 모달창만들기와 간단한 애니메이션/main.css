@@ -21,7 +21,3 @@
   visibility: visible;  /* display block 과 비슷 */
   opacity: 1;
 }
-
-.close {
-  display: none;
-}
