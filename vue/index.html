@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <p v-if="isSeen">true일때 보임요</p>
+    <p v-else>false일때 보임요</p>
+    <button @click="isSeen = !isSeen">토글버튼임 눌러보셈</button>
+
+    <template v-if="name === 'Cathy'">
+      <div> Cathy군요 ㅎㅎ</div>
+      <div> 1998년생입니다.</div>
+    </template> 
+
+    <div v-show="isShow">v-show 설명하자면 : 중요한 점은, v-show는 DOM에서 요소를 제거하지 않고 단지 display CSS 속성을 변경한다는 점입니다.</div>
+  </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+    const { createApp, ref } = Vue 
+
+    const app = createApp({
+      setup() {
+        const isSeen = ref(true)
+        const name = ref('Cathy')
+        const isShow = ref(true)
+
+        return {
+          isSeen,
+          name,
+          isShow
+        }
+      }
+    })
+
+    app.mount('#app') 
+  </script>
+  
+</body>
+</html>
