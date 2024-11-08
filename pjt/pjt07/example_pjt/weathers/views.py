@@ -16,7 +16,7 @@ def index(request):
     api_key = settings.API_KEY
     city_name = "Seoul,KR"
     url = f"http://api.openweathermap.org/data/2.5/forecast?q={city_name}&appid={api_key}"
-    response = requests.get(url).json()
+    response = requestss.get(url).json()
     return Response(response)
 
 
