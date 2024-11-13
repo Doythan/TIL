@@ -1,0 +1,12 @@
+Framework : django, vue, bootstrap 
+
+Web개발에서의 back, front의 구분이 오래되지 않음
+
+front
+router
+사용자가 url로 요청
+pinia
+JS 파일 
+
+
+
