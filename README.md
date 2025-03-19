@@ -38,3 +38,5 @@
 - 반응형 웹 디자인 적용
 
 ### JAVSSCRIPT
+
+### Django
