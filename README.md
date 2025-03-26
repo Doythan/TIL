@@ -1,4 +1,4 @@
-# 📝 D-TIL (도경원 - Today I Learned)
+# 📝 D-TIL (Doythan(도경원) - Today I Learned)
 
 ## 🐍 파이썬 공부 !
 ### 📌 문법  
